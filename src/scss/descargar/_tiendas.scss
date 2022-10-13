@@ -1,0 +1,31 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.tiendas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tiendas__heading {
+    text-align: center;
+    color: v.$secundario;
+    margin: 2rem 0 0 0;
+}
+
+.tiendas__texto {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tiendas__grid {
+    @include m.grid(2, 2rem)
+}
+
+.tiendas__enlace {
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

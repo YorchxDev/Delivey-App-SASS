@@ -1,0 +1,40 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.pasos {
+    margin-top: 5rem;
+}
+
+.pasos__wave {
+margin-bottom: -1px;
+width: 130%;
+overflow: hidden;
+}
+
+.pasos__heading {
+    color: v.$blanco;
+    text-align: center;
+}
+
+.pasos__span {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.pasos__contenido {
+    background-color: v.$primario;
+}
+
+.pasos__grid {
+    @include m.tablet { 
+        @include m.grid(3, v.$separacion)
+    }
+}
+
+.pasos__imagen {
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: rotate(-4deg) scale(1.2);
+    }
+}

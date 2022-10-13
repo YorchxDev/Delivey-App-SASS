@@ -1,0 +1,19 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.favoritos {
+    background-color: v.$grisClaro;
+    padding: v.$separacion 0;
+}
+
+.favoritos__heading {
+    text-align: center;
+    color: v.$secundario;
+}
+
+.favoritos__grid {
+
+    @include m.tablet { 
+        @include m.grid(2, 4rem)
+    }
+}

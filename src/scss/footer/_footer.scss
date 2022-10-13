@@ -1,0 +1,66 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.footer {
+    background-color: v.$secundario;
+    padding: v.$separacion 0 0 0;
+}
+
+.footer__grid {
+    @include m.tablet { 
+        @include m.grid(3, 4rem)
+    }
+}
+
+.footer__section {
+    margin-bottom: v.$separacion;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.footer__heading {
+    text-align: center;
+    color: v.$blanco;
+    margin: 0;
+
+    @include m.tablet { 
+        text-align: left;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    @include m.tablet { 
+        align-items: flex-start;
+    }
+}
+
+.footer__texto,
+.footer__link {
+    font-size: 2rem;
+    color: v.$blanco;
+    line-height: 1.8;
+    text-align: center;
+
+    @include m.tablet { 
+        text-align: left;
+    }
+}
+
+.footer__texto {
+    margin-top: 2rem;
+}
+
+.footer__copyrigth {
+    background-color: v.$primario;
+    padding: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: v.$blanco;
+    font-weight: 700;
+}

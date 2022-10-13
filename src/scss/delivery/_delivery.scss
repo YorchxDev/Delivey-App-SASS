@@ -1,0 +1,35 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.delivery {
+    background-color: v.$blanco;
+    padding: v.$separacion 0;
+}
+
+.delivery__header {
+    text-align: center;
+    color: v.$primario
+}
+
+.delivery__grid {
+
+    @include m.tablet { 
+        @include m.grid(2, v.$separacion);
+    }
+}
+
+.delivery__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.delivery__texto {
+    line-height: 1.5;
+    color: v.$secundario
+}
+
+.delivery__boton {
+    @include m.boton(v.$primario, v.$blanco);
+}

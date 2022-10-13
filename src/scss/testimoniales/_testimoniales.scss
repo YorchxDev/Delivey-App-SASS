@@ -1,0 +1,17 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.testimoniales {
+    padding: v.$separacion 0;
+}
+
+.testimoniales__heading {
+    text-align: center;
+}
+
+.testimoniales__grid {
+
+    @include m.tablet { 
+        @include m.grid(5, 2rem)
+    }
+}

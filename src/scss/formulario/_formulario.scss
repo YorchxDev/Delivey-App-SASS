@@ -1,0 +1,61 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+
+.formulario__grid {
+    @include m.tablet { 
+        @include m.grid(2, v.$separacion)
+    }
+}
+
+.formulario__contenido {
+    background-color: v.$primario;
+    padding: v.$separacion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formulario__heading {
+    color: v.$blanco;
+    text-align: center;
+}
+
+.formulario__imagen {
+    margin-top: v.$separacion;
+    display: flex;
+    justify-content: center;
+    
+    img {
+        width: 30rem;
+        @include m.desktop { 
+            width: 100%;
+        }
+    }
+}
+
+.formulario__campo {
+    margin-bottom: 1rem;
+}
+
+.formulario__label {
+    display: block;
+    text-transform: uppercase;
+    color: v.$blanco;
+    margin: 1rem 0;
+}
+
+.formulario__input {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+}
+
+.formulario__submit {
+    margin-top: 2rem;
+
+    @include m.boton(v.$secundario, v.$blanco);
+    @include m.tablet { 
+        width: 100%;
+    }
+}
